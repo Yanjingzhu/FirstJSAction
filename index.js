@@ -11,6 +11,7 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
   core.setFailed("Errors setFailed");
+  process.exit(1);
 } catch (error) {
   core.setFailed(error.message);
 }
