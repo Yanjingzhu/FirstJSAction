@@ -28,4 +28,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: '2020/04/29'
           message: 'Release test'
-          commit: ${{ github.event.pull_request.head.sha }}
+          commit: ${{ github.sha }}
