@@ -26,6 +26,6 @@ jobs:
     - uses: ./
       with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: '2020/04/29'
+          tag: 'v1.2'
           message: 'Release test'
           commit: ${{ github.sha }}
