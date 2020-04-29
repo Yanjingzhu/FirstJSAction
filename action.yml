@@ -8,11 +8,11 @@ inputs:
      description: "tag message"
      required: true
   commit: 
-     description: "commit sha "
+     description: "commit sha"
      required: true 
   token:
     required: true
-    default: 
+    default: ${{ github.token }}
 outputs:
   time: # id of output
     description: 'The time we greeted you'
