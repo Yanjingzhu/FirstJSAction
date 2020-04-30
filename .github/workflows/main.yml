@@ -21,15 +21,18 @@ jobs:
     steps:
   
     - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+      if: "1!=1"
     - name: Bump version and push tag
       uses: mathieudutour/github-tag-action@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
       
     - uses: ./
-      if: "1!=1"
+     # if: "1!=1"
       with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MyPAT }}
           tag: 'v1.2'
           message: 'Release test'
           commit: ${{ github.sha }}
