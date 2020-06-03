@@ -37,8 +37,15 @@ async function tag() {
     )
 }
 
-tag().catch(
-    (err) => {
-        core.setFailed(err.message)
-    }
-);
+// tag().catch(
+//     (err) => {
+//         core.setFailed(err.message)
+//     }
+// );
+try {
+  // `who-to-greet` input defined in action metadata file
+  const env_var = process.env['myenv'];
+  console.log(`my env ${env_var}!`);
+} catch (error) {
+  core.setFailed(error.message);
+}
