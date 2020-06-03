@@ -44,7 +44,7 @@ async function tag() {
 // );
 try {
   // `who-to-greet` input defined in action metadata file
-  const env_var = process.env['myenv'];
+  const env_var = core.getInput("myenv");
   console.log(`my env ${env_var}!`);
 } catch (error) {
   core.setFailed(error.message);
