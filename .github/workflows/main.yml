@@ -32,4 +32,4 @@ jobs:
           message: 'Release test'
           commit: ${{ github.sha }}
       env: 
-        myenv: '123'
+        INPUT_MYENV: '123'
