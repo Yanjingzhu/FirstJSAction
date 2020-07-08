@@ -6,6 +6,10 @@ name: CI
 # events but only for the master branch
 on:
   workflow_dispatch:
+    inputs:
+      newUnityVersion:
+        description: 'The new version number string to generate the license activation file for.'
+        required: true
 #   push:
 #     branches: [ master ]
 #   pull_request:
